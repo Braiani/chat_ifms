@@ -1,0 +1,35 @@
+# Diretórios comuns
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Configurações do sistema
+*.env
+.DS_Store
+*.swp
+*.swo
+
+# Arquivos de logs
+*.log
+
+# Ambientes virtuais
+venv/
+.env/
+
+# Arquivos de saída do modelo
+*.bin
+*.h5
+
+# Diretórios do PyTorch
+runs/
+checkpoints/
+
+# Arquivos de grandes pacotes de dados
+data/
+
+# Configurações do Jupyter Notebook
+.ipynb_checkpoints/
+
+# Outros arquivos temporários
+*.tmp

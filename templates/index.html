@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Documentos</title>
+</head>
+<body>
+    <h1>Gerador de Documentos Internos</h1>
+    <form method="POST">
+        <label for="query">Consulta SQL:</label>
+        <input type="text" name="query" id="query">
+        <button type="submit">Gerar Documento</button>
+    </form>
+
+    {% if text %}
+    <h2>Texto Gerado:</h2>
+    <p>{{ text }}</p>
+    {% endif %}
+</body>
+</html>
