@@ -1,11 +1,24 @@
 import psycopg2
+import dotenv as env
+import os
+
+
+def load_config():
+    env.load_dotenv()
+    return {
+        "host": os.getenv("DB_HOST"),
+        "database": os.getenv("DB_NAME"),
+        "user": os.getenv("DB_USER"),
+        "password": os.getenv("DB_PASS")
+    }
 
 def connect_to_db():
+    config = load_config()
     conn = psycopg2.connect(
-        host="localhost",
-        database="nome_do_banco",
-        user="seu_usuario",
-        password="sua_senha"
+        host=config["host"],
+        database=config["database"],
+        user=config["user"],
+        password=config["password"]
     )
     return conn
 
