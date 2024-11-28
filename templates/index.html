@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de Documentos</title>
+    <title>ChatIF</title>
+    <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
-    <h1>Gerador de Documentos Internos</h1>
-    <form method="POST">
-        <label for="query">Consulta SQL:</label>
-        <input type="text" name="query" id="query">
-        <button type="submit">Gerar Documento</button>
-    </form>
+    <div class="container">
+        <h1>ChatIF</h1>
+        <form method="POST">
+            <!-- <label for="query">Pergunte:</label> -->
+            <input type="text" name="query" placeholder="Como posso te ajudar hoje?" id="query">
+            <button type="submit">Realizar pergunta</button>
+        </form>
+        <hr>
 
-    {% if text %}
-    <h2>Texto Gerado:</h2>
-    <p>{{ text }}</p>
-    {% endif %}
+        {% if text %}
+        <h2>Texto Gerado:</h2>
+        <p>{{ text }}</p>
+        {% endif %}
+    </div>
 </body>
 </html>

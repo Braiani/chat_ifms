@@ -30,3 +30,9 @@ def get_data_from_db(query):
     cur.close()
     conn.close()
     return data
+
+
+if __name__ == "__main__":
+    query = "SELECT * FROM pessoa_fisica LIMIT 5;"  # Substitua por uma consulta relevante
+    data = get_data_from_db(query)
+    print("Dados recuperados:", data)

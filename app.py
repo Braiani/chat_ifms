@@ -8,9 +8,9 @@ app = Flask(__name__)
 def index():
     if request.method == "POST":
         query = request.form["query"]
-        db_data = get_data_from_db(query)
-        prompt = " ".join([str(item) for item in db_data])  # Juntar os dados
-        generated_text = generate_text(prompt)
+        # db_data = get_data_from_db(query)
+        # prompt = " ".join([str(item) for item in db_data])  # Juntar os dados
+        generated_text = generate_text(query)
         return render_template("index.html", text=generated_text)
     return render_template("index.html", text="")
 
