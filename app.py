@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from db_connection import get_data_from_db
+# from db_connection import get_data_from_db
 from model_training import generate_text
 
 app = Flask(__name__)
